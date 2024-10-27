@@ -1,176 +1,49 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-	Template Name 	: First Step - School & Education Institute HTML Template
-	Author 			: Awaiken Theme
-	Author Url 		: https://awaikenthemes.com
-*/
-
-/************************************/
-/***** 	    General css		     ****/
-/************************************/
-
-body{
-	font-size: 16px;
-	font-family: Arial, Helvetica, sans-serif;
+.top-bar{
+	padding: 10px 0;
+	background: #0D4F82;
+}
+.school-info ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-	margin-top:0;
-	font-weight: 700;
-	}    
-h3  {
-	margin-top:0;
-	font-weight: 700;
-	color: red;
+.school-info ul li{
+	display: inline-block;
+	margin-left: 4px;
 }
 
-img{
-	max-width: 100%;
-}
-
-a:hover{
-	text-decoration: none;
-	outline: 0;
-}
-
-a:focus{
-	text-decoration: none;
-	outline: 0;
-}
-
-::-moz-selection{
-	background: #ff5f47;
+.school-info ul li:before{
+	content: '/';
 	color: #fff;
+	font-size: 14px;
+	margin-right: 8px;
 }
 
-::selection{
-	background: #ff5f47;
+.school-info ul li:first-child:before{
+	display: none;
+}
+
+
+
+.school-info ul li a:hover{
+	color: #ff5722;
+}
+
+.header-social-link a{
+	display: inline-block;
+	font-size: 14px;
 	color: #fff;
-}
-
-.preloader{
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #ecf1f5;
-	z-index: 9999;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	color: #fff;
 	text-align: center;
+	margin-right: 4px;
 }
 
-.loader{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 30px;
-	height: 120px;
-	display: flex;
-	flex-flow: column nowrap;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-
-.preloader .diamond{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-    width: 30px;
-    height: 30px;
-    border-radius: 2px;
-    background: #ff685c;
-    -webkit-transform: translateY(0) rotate(45deg) scale(0);
-    transform: translateY(0) rotate(45deg) scale(0);
-    -webkit-animation: diamonds 1500ms linear infinite;
-    animation: diamonds 1500ms linear infinite;
-}
-
-.preloader .diamond:nth-child(1) {
-    -webkit-animation-delay: -1000ms;
-    animation-delay: -1000ms;
-}
-
-.preloader .diamond:nth-child(2) {
-    -webkit-animation-delay: -2000ms;
-    animation-delay: -2000ms;
-}
-
-.preloader .diamond:nth-child(3) {
-    -webkit-animation-delay: -3000ms;
-    animation-delay: -3000ms;
-}
-
-.preloader .diamond:nth-child(4) {
-    -webkit-animation-delay: -4000ms;
-    animation-delay: -4000ms;
-}
-
-@-webkit-keyframes diamonds {
-    50% {
-        -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
-        transform: translateY(-50px) rotate(45deg) scale(1);
-    }
-    100% {
-        -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
-        transform: translateY(-100px) rotate(45deg) scale(0);
-    }
-}
-
-@keyframes diamonds {
-    50% {
-        -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
-        transform: translateY(-50px) rotate(45deg) scale(1);
-    }
-    100% {
-        -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
-        transform: translateY(-100px) rotate(45deg) scale(0);
-    }
-}
-
-.row.no-gutters{
-	margin-right: 0;
-	margin-left: 0;
-}
-
-.row.no-gutters > [class^="col-"],
-.row.no-gutters > [class*=" col-"] {
-	padding-right: 0;
-	padding-left: 0;
-}
 
 /************************************/
 /*****    Navigation area css   *****/
@@ -249,11 +122,16 @@ header .navbar .navbar-nav .nav-link {
 html {
     scroll-behavior: smooth;
 }
+.nav-logo {
+    width: 80px; /* Ajustez la largeur souhaitée, par exemple 50px */
+    height: auto; /* Conserve les proportions de l'image */
+}
 
 
 /**************************************/
-/*****    Banner Slider area css  *****/
+/* Banner Slider area css (caroussel) */
 /**************************************/
+
 .banner-slider {
     position: relative;
     margin-top: 100px; /* Espacement pour éviter la navbar */
@@ -306,7 +184,7 @@ html {
 
 
 /**************************************/
-/*****   Our Activities area css  *****/
+/*****   Activities area css  *****/
 /**************************************/
 .imgact {
     width: 100%; /* Pour que l'image s'adapte au conteneur */
@@ -488,10 +366,6 @@ html {
     align-items: center; /* Centre verticalement les éléments */
     padding: 10px; /* Ajoute du padding à l'intérieur du footer */
 }
-
-/************************************/
-/*****     Courses area css     *****/
-/************************************/
 
 
 /****************/
@@ -803,188 +677,100 @@ h3.text-blue {
 	box-shadow: 0 0 0 6px rgba(255,87,34,0.5);
 }
 
+
+
+
 /*************************************/
 /*****      Footer area css      *****/
 /*************************************/
-footer .nav a {
-    color: #333; /* Couleur des icônes */
+/* Import de la police Urbanist depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap');
+
+footer {
+    background-color: #D3E5F2; /* Couleur de fond personnalisée */
+    font-family: 'Urbanist', sans-serif; /* Police Urbanist */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 80px; /* Taille du logo */
+    height: 80px;
+    border-radius: 50%; /* Rendre le logo circulaire */
+    margin-bottom: 15px; /* Espace entre le logo et les icônes sociales */
+}
+
+.social-media {
+    margin: 15px 0; /* Espace autour de la section sociale */
+}
+
+.social-media p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2F6896; /* Couleur du texte "Suivez-nous sur" */
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+.social-icons a {
+    font-size: 24px; /* Taille des icônes */
+    color: #2F6896; /* Couleur des icônes */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Agrandissement au survol */
+}
+
+.school-info {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments de manière verticale */
+    align-items: flex-end; /* Aligne à droite */
+    margin-top: 15px; /* Espace au-dessus de la section */
+}
+
+.school-info ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+.school-info li {
+    margin-bottom: 10px; /* Ajoute un espace entre les éléments de la liste */
+}
+
+.school-info a {
+    color: #0D4F82 !important; /* Couleur bleue pour le texte des liens */
+    text-decoration: none; /* Supprime le soulignement du lien */
+    font-family: 'Urbanist', sans-serif; /* Police Urbanist */
+}
+
+.school-info a:hover {
+    text-decoration: underline; /* Souligne le texte au survol */
+}
+
+/* Styles pour la barre supérieure */
+.top-bar {
+    background-color: #0D4F82; /* Couleur de fond sombre pour contraste */
+    color: #ffffff; /* Couleur de texte blanche */
+    font-family: 'Urbanist', sans-serif; /* Police Urbanist */
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+}
+
+.nav a {
+    color: #0D4F82; /* Couleur des icônes */
     font-size: 20px; /* Taille des icônes */
     transition: color 0.3s;
 }
 
 footer .nav a:hover {
     color: #ff5722; /* Couleur au survol */
-}
-
-
-/************************************/
-/*****       Media Screens      *****/
-/************************************/
-
-@media only screen and (max-width: 991px){
-	.header .navbar-nav{
-		display: none;
-	}
-	
-	.header .navbar{
-		align-items: flex-start;
-	}
-
-	.header .navbar .container{
-		position: relative;
-		flex-wrap: wrap;
-	}
-	
-	.header .navbar-toggle,
-	#responsive-menu{
-		display: block;
-		width: 100%;
-	}
-}
-
-/* Mobile Layout */
-@media only screen and (max-width: 991px){
-	.navbar-brand{
-		padding-top: 18px;
-		padding-bottom: 18px;
-	}
-	
-	.banner-slide .banner-slide-overlay{
-		left: 10%;
-		right: 10%;
-	}
-	
-	.banner-slide-overlay h2{
-		font-size: 36px;
-	}
-	
-	.activities-single{
-		padding: 0;
-	}
-	
-	.course-single{
-		max-width: 480px;
-		margin: 0 auto 30px;
-	}
-}
-
-@media only screen and (max-width: 767px){
-	
-	.our-activities{
-		padding: 60px 0 20px;
-	}
-	
-	.courses,
-	.faculty{
-		padding: 60px 0 30px;
-	}
-	
-	.about-us,
-	.events,
-	.contactus{
-		padding: 60px 0;
-	}
-	
-	.testimonial{
-		padding: 60px 0 0;
-	}
-	
-	.photo-gallery{
-		padding: 60px 0 10px;
-	}
-	
-	.section-title{
-		margin-bottom: 40px;
-	}
-	
-	.section-title h2{
-		font-size: 24px;
-	}
-
-	.section-title p{
-		font-size: 14px;
-	}
-	
-	.header-social-link,
-	.school-info{
-		text-align: center;
-	}
-	
-	.school-info ul li{
-		display: block;
-	}
-	
-	.school-info ul li:before{
-		display: none;
-	}
-	
-	.banner-slide .banner-slide-overlay{
-		left: 14%;
-		right: 14%;
-	}
-	
-	.banner-slide-overlay h2{
-		font-size: 20px;
-		text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
-	}
-	
-	.btn-slider{
-		padding: 6px 20px;
-		font-size: 14px;
-	}
-	
-	.activities-single{
-		margin-bottom: 40px;
-	}
-	
-	.about-image{
-		margin-bottom: 40px;
-	}
-	
-	.testimonial-slider-wrapper-outer{
-		padding: 10px 10px 0 10px;
-	}
-	
-	.testimonial-slide{
-		padding: 30px 20px 0;
-	}
-	
-	.testimonial-slide h3{
-		font-size: 22px;
-	}
-	
-	.testimonial-slide p{
-		font-size: 18px;
-	}
-}
-
-@media only screen and (max-width: 575px){
-	
-	.header .container{
-		width: 100%;
-		padding-left: 15px !important;
-		padding-right: 15px !important;
-	}
-	
-	.header-social-link{
-		display: none;
-	}
-	
-	.contact-info p{
-		font-size: 18px;
-	}
-	
-	.contact-social-link{
-		text-align: center;
-		margin-bottom: 40px;
-	}
-	
-	.contact-social-link a{
-		margin: 6px 10px;
-	}
-	
-	.event-single{
-		margin: 20px;
-		box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
-	}
 }

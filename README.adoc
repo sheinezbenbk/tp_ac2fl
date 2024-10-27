@@ -1,0 +1,14 @@
+= AC2FL
+BAL Zeinabou - BEN BOUBAKER Sheinez 
+:date: 2024-10-27
+:source-highlighter: coderay
+:toc: left
+:toclevels: 3
+
+
+== Maquette 
+
+Cette maquette représente le projet AC2FL. Elle est conçue pour illustrer l'interface utilisateur et les fonctionnalités prévues dans la version finale de l'amélioration de notre site web.
+
+=== Lien vers la maquette 
+https://www.figma.com/design/cFDTBhbnoZ6eLXIUyZmb07/maquette-tp1-bootstrap?node-id=0-1&t=N7GclWhXQlkFGI78-1
