@@ -1,0 +1,990 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+	Template Name 	: First Step - School & Education Institute HTML Template
+	Author 			: Awaiken Theme
+	Author Url 		: https://awaikenthemes.com
+*/
+
+/************************************/
+/***** 	    General css		     ****/
+/************************************/
+
+body{
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin-top:0;
+	font-weight: 700;
+	}    
+h3  {
+	margin-top:0;
+	font-weight: 700;
+	color: red;
+}
+
+img{
+	max-width: 100%;
+}
+
+a:hover{
+	text-decoration: none;
+	outline: 0;
+}
+
+a:focus{
+	text-decoration: none;
+	outline: 0;
+}
+
+::-moz-selection{
+	background: #ff5f47;
+	color: #fff;
+}
+
+::selection{
+	background: #ff5f47;
+	color: #fff;
+}
+
+.preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #ecf1f5;
+	z-index: 9999;
+	text-align: center;
+}
+
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 120px;
+	display: flex;
+	flex-flow: column nowrap;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.preloader .diamond{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    background: #ff685c;
+    -webkit-transform: translateY(0) rotate(45deg) scale(0);
+    transform: translateY(0) rotate(45deg) scale(0);
+    -webkit-animation: diamonds 1500ms linear infinite;
+    animation: diamonds 1500ms linear infinite;
+}
+
+.preloader .diamond:nth-child(1) {
+    -webkit-animation-delay: -1000ms;
+    animation-delay: -1000ms;
+}
+
+.preloader .diamond:nth-child(2) {
+    -webkit-animation-delay: -2000ms;
+    animation-delay: -2000ms;
+}
+
+.preloader .diamond:nth-child(3) {
+    -webkit-animation-delay: -3000ms;
+    animation-delay: -3000ms;
+}
+
+.preloader .diamond:nth-child(4) {
+    -webkit-animation-delay: -4000ms;
+    animation-delay: -4000ms;
+}
+
+@-webkit-keyframes diamonds {
+    50% {
+        -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
+        transform: translateY(-50px) rotate(45deg) scale(1);
+    }
+    100% {
+        -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
+        transform: translateY(-100px) rotate(45deg) scale(0);
+    }
+}
+
+@keyframes diamonds {
+    50% {
+        -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
+        transform: translateY(-50px) rotate(45deg) scale(1);
+    }
+    100% {
+        -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
+        transform: translateY(-100px) rotate(45deg) scale(0);
+    }
+}
+
+.row.no-gutters{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/************************************/
+/*****    Navigation area css   *****/
+/************************************/
+.boutoncontact {
+    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.boutoncontact a {
+    font-size: 14px; /* Taille de police réduite */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff; /* Couleur du texte pour un meilleur contraste */
+    padding: 5px 10px; /* Padding réduit */
+    border-radius: 20px;
+    display: inline-block;
+    background-color: #145E97;
+    transition: all 0.3s ease; /* Transition douce */
+}
+
+.boutoncontact a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); /* Agrandissement léger au survol */
+    background-color: #1976d2; /* Couleur plus claire au survol */
+}
+
+header.header {
+    min-height: 60px; /* Hauteur minimum réduite */
+}
+
+header .navbar {
+    padding: 0 10px; /* Padding réduit pour rapprocher les éléments */
+    background: rgba(255, 255, 255, 0.95); /* Légère transparence pour le fond */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between; /* Permet de mieux gérer l'espace entre logo et nav */
+    align-items: center; /* Centrage vertical des éléments */
+    position: sticky; /* La navbar reste fixe */
+    top: 0; /* Fixée en haut */
+}
+
+header .navbar .navbar-nav {
+    display: flex; /* Assurer que les éléments nav sont en ligne */
+    gap: 10px; /* Espacement réduit entre les éléments */
+}
+
+header .navbar .navbar-nav .nav-link {
+    padding: 5px 8px; /* Padding réduit pour les liens */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px; /* Taille de police réduite */
+    color: #145E97;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition douce */
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: #1976d2;
+    transform: scale(1.05); /* Légèrement agrandi au survol */
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/**************************************/
+/*****    Banner Slider area css  *****/
+/**************************************/
+.banner-slider {
+    position: relative;
+    margin-top: 100px; /* Espacement pour éviter la navbar */
+}
+
+.banner-slide {
+    position: relative;
+    border-radius: 15px; /* Coins arrondis */
+    overflow: hidden; /* Empêche le débordement */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    max-width: 80%; /* Limite la largeur de la carte */
+    margin: auto; /* Centre horizontalement */
+}
+
+.banner-slide figure {
+    margin: 0;
+}
+
+.banner-slide figure img {
+    width: 100%; /* Largeur 100% pour s'ajuster au conteneur */
+    height: auto; /* Hauteur automatique pour conserver le ratio */
+    display: block; /* Élimine l'espace en bas de l'image */
+}
+
+.banner-button-prev,
+.banner-button-next {
+    width: 40px; /* Réduire la taille des boutons */
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    border-radius: 50%; /* Rendre les boutons ronds */
+    display: flex; /* Utiliser flexbox pour centrer le contenu */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    cursor: pointer;
+    position: absolute; /* Position absolue */
+    top: 50%; /* Centrer verticalement */
+    transform: translateY(-50%); /* Ajustement pour centrer */
+    z-index: 10; /* Assure que les boutons sont au-dessus */
+}
+
+.banner-button-prev {
+    left: 10px; /* Espace à gauche */
+}
+
+.banner-button-next {
+    right: 10px; /* Espace à droite */
+}
+
+
+
+
+/**************************************/
+/*****   Our Activities area css  *****/
+/**************************************/
+.imgact {
+    width: 100%; /* Pour que l'image s'adapte au conteneur */
+    max-width: 300px; /* Limite la largeur maximale de l'image */
+    height: auto; /* Assure que la hauteur s'ajuste automatiquement */
+    border-radius: 15px; /* Arrondi les bords de l'image */
+}
+
+.our-activities {
+    padding: 100px 0; /* Espacement autour de la section */
+    position: relative;
+}
+
+.section-title {
+    text-align: center; /* Aligne le texte au centre */
+    position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 80px;
+}
+
+.text-start h2 {
+    font-size: 40px; /* Taille du titre */
+    margin: 0;
+    color: #145E97; /* Couleur du texte (bleu) */
+    font-weight: bolder; /* Épaisseur du texte */
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; /* Souligne le titre */
+}
+
+.section-title p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px; /* Taille de la police */
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    margin-top: 20px; /* Espacement en haut */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+}
+
+.ul {
+    font-family: Arial, Helvetica, sans-serif; /* Police pour les éléments de liste */
+    font-size: 15px; /* Taille de la police */
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    list-style-position: inside; /* Style de liste à l'intérieur */
+    padding-left: 0; /* Enlève le padding gauche */
+    margin: 0; /* Enlève la marge */
+}
+
+.ul li {
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    padding-left: 5px; /* Ajuste l'espacement à gauche pour le texte */
+    list-style-type: disc; /* Définit le type de puce (disque) */
+    line-height: 1.4; /* Ajuste la hauteur de ligne pour une meilleure lisibilité */
+}
+
+.activities-single {
+    text-align: center; /* Centre le contenu */
+    padding: 0 20px; /* Espacement horizontal */
+}
+
+.activities-single .icon-box {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto 30px; /* Espacement vertical */
+    font-size: 30px; /* Taille de l'icône */
+    color: #fff; /* Couleur de l'icône */
+    line-height: 60px; /* Aligne le texte à la verticale */
+    border-radius: 50%; /* Bords arrondis */
+}
+
+.icon-blue {
+    background: #1976d2; /* Couleur de fond */
+    box-shadow: 0 0 0 7px rgba(25, 118, 209, 0.5); /* Ombre */
+}
+
+.icon-orange {
+    background: #ff5722; /* Couleur de fond */
+    box-shadow: 0 0 0 7px rgba(255, 87, 34, 0.5); /* Ombre */
+}
+
+.icon-green {
+    background: #a4cf27; /* Couleur de fond */
+    box-shadow: 0 0 0 7px rgba(164, 207, 39, 0.5); /* Ombre */
+}
+
+.activities-single h3 {
+    font-size: 22px; /* Taille du titre */
+    font-family: 'Bubblegum Sans', cursive; /* Police */
+    font-weight: 400; /* Épaisseur */
+    color: #333; /* Couleur */
+    margin-bottom: 18px; /* Espacement */
+}
+
+.activities-single p {
+    font-size: 14px; /* Taille du texte */
+    color: #707070; /* Couleur */
+    line-height: 1.7em; /* Hauteur de ligne */
+    margin-bottom: 1.5em; /* Espacement en bas */
+}
+
+.activities-single a.learn-more {
+    display: inline-block; /* Affiche en ligne */
+    color: #ff5722; /* Couleur */
+    font-weight: 600; /* Épaisseur */
+    border-bottom: 1px solid #ff5722; /* Ligne en bas */
+}
+
+.activities-single a.learn-more:after {
+    content: '\f105'; /* Icône FontAwesome */
+    font-family: FontAwesome; /* Police */
+    margin-left: 10px; /* Espacement */
+}
+
+.section-title p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px; /* Taille de la police */
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    margin-top: 20px; /* Espacement en haut */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    text-align: justify; /* Justifie le texte */
+}
+
+.courses { 
+    padding: 100px 0; /* Espacement autour de la section */
+    position: relative; 
+    background: none; /* Supprime le fond rose */
+}
+
+.text-center {
+    text-align: center; /* Centre le texte */
+}
+
+.titreulm {
+    font-size: 25px; /* Taille de la police */
+    margin: 20px 0; /* Espacement en haut et en bas */
+    color: #000; /* Couleur du texte */
+    font-weight: bold; /* Épaisseur du texte */
+    font-family: Arial, Helvetica, sans-serif; /* Police */
+    text-align: center; /* Centre le texte */
+}
+
+/* Modification pour la section ULM */
+.row {
+    display: flex; /* Utilise flexbox pour le layout */
+    justify-content: center; /* Centre horizontalement les colonnes */
+    align-items: center; /* Centre verticalement les éléments */
+}
+
+.col-lg-4 {
+    display: flex; /* Permet à la colonne de gérer l'alignement interne */
+    justify-content: center; /* Centre le contenu horizontalement */
+    margin-bottom: 30px; /* Ajoute de l'espace en bas de chaque colonne */
+}
+
+.course-single {
+    max-width: 300px; /* Limite la largeur maximale de chaque carte de cours */
+    text-align: center; /* Centre le texte à l'intérieur de la carte */
+    border-radius: 15px; /* Arrondir les coins des cartes */
+    overflow: hidden; /* Évite que le contenu dépasse les bords */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet de profondeur */
+}
+
+.course-single figure {
+    margin: 0; /* Supprime la marge par défaut de la figure */
+}
+
+.course-single img {
+    width: 100%; /* Adapte l'image à la largeur de la carte */
+    height: auto; /* Assure que la hauteur s'ajuste automatiquement */
+}
+
+.course-body {
+    padding: 15px; /* Ajoute du padding à l'intérieur de la carte */
+}
+
+.course-footer {
+    display: flex; /* Utilise flexbox pour le footer */
+    justify-content: space-between; /* Distribue les éléments de manière égale */
+    align-items: center; /* Centre verticalement les éléments */
+    padding: 10px; /* Ajoute du padding à l'intérieur du footer */
+}
+
+/************************************/
+/*****     Courses area css     *****/
+/************************************/
+
+
+/****************/
+/*** SUPPORT ****/
+/***************/
+.about-us {
+    padding: 100px 0;
+}
+
+.about-image img {
+    width: 100%; /* Adaptation de l'image à la taille du conteneur */
+    max-width: 300px; /* Largeur maximale de l'image */
+    height: auto; /* Ajustement automatique de la hauteur */
+    border-radius: 15px; /* Coins arrondis */
+}
+
+.about-content {
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+h3.text-blue {
+    color: #145E97; /* Couleur bleue pour le titre */
+    text-decoration: underline; /* Soulignement du titre */
+    margin-top: 20px; /* Espacement en haut */
+}
+
+.part-hebergement {
+    margin-top: 40px; /* Espacement au-dessus de la section hébergement */
+    display: flex; /* Utiliser flexbox pour aligner les éléments */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    gap: 20px; /* Espacement entre les cartes */
+}
+
+.course-single {
+    background: #fff; /* Fond blanc */
+    border-radius: 14px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre */
+    overflow: hidden; /* Évite que le contenu déborde */
+    margin-bottom: 30px; /* Espacement entre les cartes */
+    border: 2px solid black; /* Ajoute un contour noir de 2 pixels */
+    width: 300px; /* Largeur fixe pour toutes les cartes */
+    display: flex; /* Utiliser flexbox pour le contenu */
+    flex-direction: column; /* Orientation verticale */
+}
+
+.course-single img {
+    width: 100%; /* Adaptation de l'image à la taille de la carte */
+    height: 200px; /* Hauteur fixe pour l'image */
+    object-fit: cover; /* Recadrer l'image pour qu'elle couvre l'espace */
+}
+
+.course-body {
+    padding: 15px; /* Padding pour le contenu de la carte */
+    flex-grow: 1; /* Permet au contenu de prendre l'espace restant */
+    display: flex; /* Utiliser flexbox pour le corps de la carte */
+    flex-direction: column; /* Orientation verticale */
+}
+
+.course-body h3 {
+    font-size: 18px; /* Taille du titre de la carte */
+    margin: 0 0 10px; /* Espacement en bas */
+    color: #333; /* Couleur du texte */
+    font-weight: bold; /* Épaisseur du texte */
+}
+
+.course-body ul {
+    color: #707070; /* Couleur du texte */
+    font-size: 14px; /* Taille de la police */
+    line-height: 1.6; /* Hauteur de ligne */
+    margin: 0; /* Suppression des marges */
+    padding-left: 20px; /* Espacement à gauche pour les listes */
+}
+
+.section-title h2 {
+    color: #145E97; /* Couleur bleue pour le titre */
+    text-decoration: underline; /* Soulignement du titre */
+    font-size: 40px; /* Taille du titre */
+    margin-bottom: 20px; /* Espacement en bas */
+    font-weight: bolder; /* Épaisseur du texte */
+}
+
+
+/************************************/
+/*****    About us area css     *****/
+/************************************/
+.about-us {
+    padding: 100px 0;
+    position: relative;
+}
+
+.about-us:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -16px;
+    height: 16px;
+    background: url(../images/wave-bg3.png) repeat-x;
+    z-index: 1;
+}
+
+.about-content {
+    margin-bottom: 30px;
+}
+
+.about-images {
+    display: flex; /* Utiliser flexbox pour aligner les images sur la même ligne */
+    justify-content: center; /* Centrer les images horizontalement */
+    margin-bottom: 20px; /* Espacement en bas */
+}
+
+.about-images div {
+    flex: 1; /* Chaque image prend une part égale de l'espace */
+    max-width: 300px; /* Largeur maximale des images */
+    margin: 0 10px; /* Espacement horizontal entre les images */
+}
+
+.about-images img {
+    width: 100%; /* Adapter l'image à la largeur de son conteneur */
+    height: auto; /* Ajustement automatique de la hauteur */
+    border-radius: 15px; /* Coins arrondis */
+}
+
+.about-content h3 {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 28px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 0.6em;
+}
+
+.about-content p {
+    color: #707070;
+    line-height: 1.7em;
+    margin-bottom: 1.7em;
+    border: 1px solid red; /* Ajout d'une bordure rouge pour le débogage */
+}
+
+
+.about-social-links a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #ff5722;
+    box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.5);
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 4px 20px 4px 0;
+    transition: all 0.3s;
+}
+
+.about-social-links a:hover {
+    background: #1976d2;
+    box-shadow: 0 0 0 4px rgba(25, 118, 209, 0.5);
+}
+
+
+/************/
+/***autres***/
+/***********/
+
+.rounded-img {
+    width: 100%; /* Assure que l'image occupe toute la largeur du conteneur */
+    height: auto; /* Ajustement automatique de la hauteur */
+    border-radius: 15px; /* Arrondi des coins de l'image */
+}
+
+
+/*************************************/
+/*****     Contact us area css   *****/
+/*************************************/
+
+.contactus{
+	background: #ecf5fe;
+	padding: 100px 0;
+	position: relative;
+}
+
+.contactus:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	height: 16px;
+	background: url(../images/wave-bg3.png) repeat-x;
+	transform: rotate(180deg);
+}
+
+.contact-form .form-control{
+	border: none;
+	color: inherit;
+	padding: 10px 20px;
+	height: auto;
+	resize: none;
+	background: #fff;
+	border-radius: 8px;
+	border: 4px solid rgba(25,118,209,0.14);
+	outline: 0;
+	appearance: none;
+	-webkit-appearance: none;
+	box-shadow: none;
+}
+
+.btn-contact{
+	background: #1976d2;
+	border: none;
+	color: #fff;
+	padding: 10px 40px;
+	border: 4px solid rgba(255,255,255,0.5);
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s;
+	box-shadow: none;
+	outline: 0;
+}
+
+.btn-contact:hover,
+.btn-contact:focus{
+	background: #ff5722;
+	box-shadow: none;
+	outline: 0;
+}
+
+.contact-info p{
+	font-size: 20px;
+	font-weight: 400;
+	color: #707070;
+	position: relative;
+	padding: 5px 0 5px 60px;
+	margin-bottom: 40px;
+}
+
+.contact-info .email:before{
+	content: '\f003';
+	display: block;
+	font-family: FontAwesome;
+	width: 40px;
+	height: 40px;
+	background: #ff5722;
+	box-shadow: 0 0 0 6px rgba(255,87,34,0.5);
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.contact-info .contact:before{
+	content: '\f095';
+	display: block;
+	font-family: FontAwesome;
+	width: 40px;
+	height: 40px;
+	background: #1976d2;
+	box-shadow: 0 0 0 6px rgba(25,118,209,0.5);
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.contact-info .address:before{
+	content: '\f041';
+	display: block;
+	font-family: FontAwesome;
+	width: 40px;
+	height: 40px;
+	background: #a4cf27;
+	box-shadow: 0 0 0 6px rgba(164,207,39,0.5);
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.contact-social-link a{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: #1976d2;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 6px rgba(25,118,209,0.5);
+	margin: 6px 30px 6px 0;
+	transition: all 0.3s;
+}
+
+.contact-social-link a:hover{
+	background: #ff5722;
+	box-shadow: 0 0 0 6px rgba(255,87,34,0.5);
+}
+
+/*************************************/
+/*****      Footer area css      *****/
+/*************************************/
+footer .nav a {
+    color: #333; /* Couleur des icônes */
+    font-size: 20px; /* Taille des icônes */
+    transition: color 0.3s;
+}
+
+footer .nav a:hover {
+    color: #ff5722; /* Couleur au survol */
+}
+
+
+/************************************/
+/*****       Media Screens      *****/
+/************************************/
+
+@media only screen and (max-width: 991px){
+	.header .navbar-nav{
+		display: none;
+	}
+	
+	.header .navbar{
+		align-items: flex-start;
+	}
+
+	.header .navbar .container{
+		position: relative;
+		flex-wrap: wrap;
+	}
+	
+	.header .navbar-toggle,
+	#responsive-menu{
+		display: block;
+		width: 100%;
+	}
+}
+
+/* Mobile Layout */
+@media only screen and (max-width: 991px){
+	.navbar-brand{
+		padding-top: 18px;
+		padding-bottom: 18px;
+	}
+	
+	.banner-slide .banner-slide-overlay{
+		left: 10%;
+		right: 10%;
+	}
+	
+	.banner-slide-overlay h2{
+		font-size: 36px;
+	}
+	
+	.activities-single{
+		padding: 0;
+	}
+	
+	.course-single{
+		max-width: 480px;
+		margin: 0 auto 30px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	
+	.our-activities{
+		padding: 60px 0 20px;
+	}
+	
+	.courses,
+	.faculty{
+		padding: 60px 0 30px;
+	}
+	
+	.about-us,
+	.events,
+	.contactus{
+		padding: 60px 0;
+	}
+	
+	.testimonial{
+		padding: 60px 0 0;
+	}
+	
+	.photo-gallery{
+		padding: 60px 0 10px;
+	}
+	
+	.section-title{
+		margin-bottom: 40px;
+	}
+	
+	.section-title h2{
+		font-size: 24px;
+	}
+
+	.section-title p{
+		font-size: 14px;
+	}
+	
+	.header-social-link,
+	.school-info{
+		text-align: center;
+	}
+	
+	.school-info ul li{
+		display: block;
+	}
+	
+	.school-info ul li:before{
+		display: none;
+	}
+	
+	.banner-slide .banner-slide-overlay{
+		left: 14%;
+		right: 14%;
+	}
+	
+	.banner-slide-overlay h2{
+		font-size: 20px;
+		text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+	}
+	
+	.btn-slider{
+		padding: 6px 20px;
+		font-size: 14px;
+	}
+	
+	.activities-single{
+		margin-bottom: 40px;
+	}
+	
+	.about-image{
+		margin-bottom: 40px;
+	}
+	
+	.testimonial-slider-wrapper-outer{
+		padding: 10px 10px 0 10px;
+	}
+	
+	.testimonial-slide{
+		padding: 30px 20px 0;
+	}
+	
+	.testimonial-slide h3{
+		font-size: 22px;
+	}
+	
+	.testimonial-slide p{
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 575px){
+	
+	.header .container{
+		width: 100%;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	
+	.header-social-link{
+		display: none;
+	}
+	
+	.contact-info p{
+		font-size: 18px;
+	}
+	
+	.contact-social-link{
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	
+	.contact-social-link a{
+		margin: 6px 10px;
+	}
+	
+	.event-single{
+		margin: 20px;
+		box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+	}
+}
